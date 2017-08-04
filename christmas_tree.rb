@@ -2,7 +2,7 @@
 
 def tree(from, to)
   while from <= to
-    (25 - from).times {print " "}
+    (10 - from).times {print " "}
     (from * 2 - 1).times {print "*"}
     puts
     from += 1
