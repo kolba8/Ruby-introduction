@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
-require "byebug"
 require "date"
-byebug
+
 if ARGV.length != 1
   puts "This program need exactly 1 parameter"
   exit
@@ -39,7 +38,7 @@ while i <10
 end
 control_number = 10 - x % 10
 
-if control_number != pesel[10]
+if control_number % 10 != pesel[10]
   print "Pesel ", ARGV[0], " is incorrect.", "\n"
   exit
 end
