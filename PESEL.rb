@@ -1,14 +1,14 @@
 #!/usr/bin/env ruby
-
+require "byebug"
 require "date"
-
+byebug
 if ARGV.length != 1
   puts "This program need exactly 1 parameter"
   exit
-elsif ARGV[0].to_i.digits.count != ARGV[0].length
+elsif ! (ARGV[0].chars.all? { |c| "0123456789".include?(c) })
   puts "Parameter should be a number"
   exit
-elsif ARGV[0].length != 12345678901.digits.count
+elsif ARGV[0].length != 11
   puts "Usage ./args 12345678901"
   exit
 end
