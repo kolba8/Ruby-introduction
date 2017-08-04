@@ -22,7 +22,7 @@ x = 0
 #obliczanie daty urodzin
 day = pesel[4] * 10 + pesel [5]
 month = ( pesel[2] * 10 + pesel[3] ) % 20
-year = 1900 + ( pesel[2] * 10 + pesel[3] ) / 20 * 100 + pesel[0] * 10 + pesel[1]
+year = 1800 + ((( pesel[2] * 10 + pesel[3] ) / 20) +1) % 5 * 100 + pesel[0] * 10 + pesel[1]
 
 if Date.valid_date?(year,month,day) == false
   print "Pesel ", ARGV[0], " is incorrect.", "\n"
