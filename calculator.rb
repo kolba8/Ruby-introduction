@@ -18,8 +18,7 @@ def number
   table
 end
 
-choice = 0
-while choice.to_i < 6
+while true
 menu
 choice = gets.chomp
   case choice
