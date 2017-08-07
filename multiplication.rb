@@ -21,6 +21,6 @@ while i <= 10
     j += 1
   end
   i += 1
-  j=1
+  j = 1
   puts
 end
